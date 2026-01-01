@@ -1,9 +1,3 @@
-# CloudFlare-Auto-DMARC
-Quickly check and update your DMARC and SPF records on thousands of parked domains.
-
-```bash
-python3 cloudflare-auto-dmarc.py --help
-
     ██████╗██╗      ██████╗ ██╗   ██╗██████╗ ███████╗██╗      █████╗ ██████╗ ███████╗
     ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗██╔════╝██║     ██╔══██╗██╔══██╗██╔════╝
     ██║     ██║     ██║   ██║██║   ██║██║  ██║█████╗  ██║     ███████║██████╔╝█████╗
@@ -17,6 +11,32 @@ python3 cloudflare-auto-dmarc.py --help
     ██║  ██║╚██████╔╝   ██║   ╚██████╔╝    ██████╔╝██║ ╚═╝ ██║██║  ██║██║  ██║╚██████╗
     ╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝     ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 
+# CloudFlare-Auto-DMARC
+Quickly check and update your DMARC and SPF records on thousands of parked domains.
+
+## Quickstart
+
+1. [Create a DNS read/write Cloudflare token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
+   
+3. Add your token as an environmental variable in your terminal:
+   
+    ```bash
+    export CF_API_TOKEN=<token_goes_here>`
+    ```
+    
+4. Run the script in a read-only mode to audit your domains' security:
+   
+    ```bash
+    python3 cloudflare-auto-dmarc.py -e CF_API_TOKEN -o dmarc.csv
+    ```
+
+## Flags
+You can request a copy of the man page.
+```
+python3 cloudflare-auto-dmarc.py --help
+```
+Which will result in the following:
+```bash
 Usage:  cloudflare-auto-dmarc.py [-a | -h | -v] [-e VARIABLE] [-t TOKEN] [-o FILE]
 -a, --autofix
 
