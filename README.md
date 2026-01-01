@@ -38,7 +38,8 @@ Usage:  cloudflare-auto-dmarc.py [-a | -h | -v] [-e VARIABLE] [-t TOKEN] [-o FIL
 -o FILE, --output=FILE
 
     This is where you will save your CSV report.
-```
+
 -v, --vulnerable-only
 
     Output file will only include vulnerable domains in the results
+```
